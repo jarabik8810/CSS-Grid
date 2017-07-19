@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by jarabik8810 (http://jsbin.com/cavufug/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="css Grid">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CSS GRID</title>
+<style id="jsbin-css">
+
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  grid-template-rows: 100px auto 100px;
+  grid-gap: 1em;
+  grid-template-areas: "header header header"
+                       "left article right"
+                       "footer footer footer" ;
+  height: 100vh;
+}
+
+.header,.footer,.article, .sidebar-left, .sidebar-right {
+  background: #ccc;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar-left {
+  grid-area: left;
+}
+
+.sidebar-right {
+  grid-area: right;
+}
+
+.article {
+  grid-area: article;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+</style>
+</head>
+<body>
+   <div class="container">
+     <div class="header">Header</div>
+     <div class="sidebar-left">Sidebar</div>
+     <div class="article">Article <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p></div>
+     <div class="sidebar-right">Sidebar</div>
+     <div class="footer">Footer</div>
+   </div>
+</body>
+</html>
